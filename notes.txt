@@ -1,0 +1,51 @@
+uvicorn --host 0.0.0.0 app.main:app
+to auto start the application
+gunicorn -w 4 -k uvicorn.workers.UvicornWorker app.main:app --bind 0.0.0.0:8000
+
+
+install pip 
+> sudo apt install python3-pip
+install virtualenv
+> sudo apt install virtualenv
+install postgres
+> sudo apt install postgresql postgresql-contrib -y
+
+$su - postgres
+you will get postgres prompt
+postgres=# 
+create password for postgres
+postgres=# \password postgres
+Enter new password:
+Enter it again:
+postgres=# \q       - tovirt
+
+set -o allexport; source /home/bijendra/.env; set +o allexport
+
+sudo systemctl enable api
+
+sudo ufw status  --to check the firewall status
+sudo ufw allow http   - to allow http
+sudo ufw allow https
+sudo ufw allow ssh
+
+then sudo ufw enable
+sudo ufw  status   -- to check status
+
+
+if you make any changes in your application
+
+git add --all
+git commit -m "message for this change"
+git push origin main
+
+then go your remote server and go
+git pull
+
+
+certbot site to install certificate.
+
+
+compile the python code to exe
+
+py -m nuitka --mingw64 windows10-wifi.py --standalone --onefile
+

@@ -10,6 +10,7 @@ from .routers import post, user, auth, vote
 
 # This is required if the tables need to be created by sqlalchemy
 # As we are using Alembic this line can be commented
+
 # models.Base.metadata.create_all(bind=engine)
 
 
@@ -35,4 +36,4 @@ app.include_router(vote.router)
 
 @app.get("/")
 def root():
-    return {"message": "Welcome to my API"}
+    return {"message": "Welcome to my API -- changes done"}

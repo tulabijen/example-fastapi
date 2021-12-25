@@ -104,7 +104,7 @@ def update_post(id: int, updated_post: schemas.PostCreate, db: Session = Depends
     # cursor.execute(""" UPDATE  posts SET title = %s, content = %s, published = %s WHERE id = %s RETURNING * """,
     #                (post.title, post.content, post.published, str(id)))
     # updated_post = cursor.fetchone()
-    post_query = db.query(models.Post).filter(models.Post.id == id).first()
+    post_query = db.query(models.Post).filter(models.Post.id == id)
     post = post_query.first()
 
     if post == None:

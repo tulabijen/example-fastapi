@@ -129,22 +129,28 @@ GROUP BY posts.id;
 11:48:42 Env Variables in Heroku
 11:58:59 Alembic migrations on Heroku Postgres instance
 12:02:52 Pushing changed to production
+                completed 03_12 at 13:13
+
 12:05:04 Create an Ubuntu VM
 12:08:04 Update packages
 12:10:47 Install Python
 12:12:21 Install Postgres & setup password
 12:17:28 Postgres Config
 12:24:50 Create new user and setup python evironment
+                          completed 04_12 at 14:02
 12:34:06 Env Variables
 12:42:24 Alembic migrations on production database
 12:45:57 Gunicorn
+                      completed 6_12 at 21:19 (12:53:41)
 12:54:12 Creating a Systemd service
 13:04:45 NGINX
+          completed 7_12 at 21:00 (13:10:45)
 13:10:45 Setting up Domain name
 13:15:19 SSL/HTTPS
 13:19:31 NGINX enable
 13:20:06 Firewall
 13:23:47 Pushing code changes to Production
+                    completed 8_12 at 21:10  (13:27)
 13:26:09 Dockerfile
 13:38:39 Docker Compose
 13:48:34 Postgres Container
@@ -156,22 +162,27 @@ GROUP BY posts.id;
 14:30:22 The -s & -v flags
 14:31:44 Testing more functions
 14:35:29 Parametrize
+              completed (14:39:50)
 14:40:21 Testing Classes
 14:48:37 Fixtures
 14:55:40 Combining Fixtures + Parametrize
-14:59:13 Testing Exceptions
+14:59:13 Testing Exceptions 
+          Completed 14-dec (15:06;18)
 15:06:07 FastAPI TestClient
 15:14:26 Pytest flags
-15:17:31 Test create user
+15:17:31 Test create user  
+                completed 15_12 (15:27:18)
 15:25:23 Setup testing database
 15:36:47 Create & destroy database after each test
 15:44:18 More Fixtures to handle database interaction
 15:50:35 Trailing slashes in path
-15:53:12 Fixture scope
+15:53:12 Fixture scope 
+                Completed 17_dec
 16:07:50 Test user fixture
 16:14:40 Test/validate token
 16:18:59 Conftest.py
 16:22:09 Testing
+        conpleted 18 Dec (17:15:00)
 17:34:15 CI/CD intro
 17:43:29 Github Actions
 17:49:32 Creating Jobs
@@ -183,3 +194,21 @@ GROUP BY posts.id;
 18:34:33 Deploy to heroku
 18:49:10 Failing tests in pipeline
 18:52:18 Deploy to Ubuntu
+
+
+Git 
+Create an accout in GITHUB
+Once the files are ready you can run the following commands
+> git add --all 
+> git commit -m "give the reason/comment for this"
+> git push origin main 
+> git push heroku main  - this is to push the git to heroku 
+
+> heroku alembic upgrade head - to upgrade the db in the heroku.
+
+
+Docker:
+Create a docker accoun
+Create a Dockerfile
+> docker-compose up -d 
+> docker-compose -f docker-compose-dev.yml up -d   - to select the yml file.
