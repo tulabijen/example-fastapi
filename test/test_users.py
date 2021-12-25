@@ -9,7 +9,7 @@ from app.config import settings
 def test_root(client):
     res = client.get("/")
     print(res.json().get('message'))
-    assert res.json().get('message') == "Welcome to my API -- changes done"
+    assert res.json().get('message') == "Welcome to my API -- Successfully  done CI/CD"
     assert res.status_code == 200
 
 
