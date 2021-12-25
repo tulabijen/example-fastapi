@@ -11,7 +11,7 @@ from app.database import get_db
 from app.models import Base
 
 
-SQLALCHEMY_DATABASE_URL = 'postgresql://postgres:kathmandu@localhost:5433/fastapi_test'
+SQLALCHEMY_DATABASE_URL = 'postgresql://postgres:kathmandu@localhost:5432/fastapi_test'
 
 # SQLALCHEMY_DATABASE_URL = f"postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}"
 
